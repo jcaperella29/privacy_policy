@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — GA4 GitHub Clicks Emailer</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;margin:0;background:#f7fafc;color:#111827}
+    .wrap{max-width:860px;margin:0 auto;padding:32px 18px}
+    h1{font-size:2rem;margin:.2rem 0 1rem}
+    h2{margin:1.5rem 0 .5rem}
+    code{background:#f3f4f6;padding:2px 6px;border-radius:6px}
+    a{color:#0d6efd;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .box{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 16px;margin:16px 0}
+    ul{margin:.25rem 0 .75rem 1.1rem}
+    .muted{color:#6b7280}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Privacy Policy — GA4 GitHub Clicks Emailer</h1>
+    <p class="muted">Effective date: <strong><!-- update if you like -->2025-08-18</strong></p>
+
+    <div class="box">
+      <p>
+        This simple Apps Script (“<strong>GA4 GitHub Clicks Emailer</strong>”) reads aggregated event data from
+        a Google Analytics 4 (GA4) property that you own and emails you a daily summary of GitHub button
+        clicks per app (e.g., <code>scrna</code>, <code>gwas</code>). It is intended for personal/organizational
+        use by the GA4 property owner.
+      </p>
+    </div>
+
+    <h2>What data is accessed</h2>
+    <ul>
+      <li><strong>Source:</strong> Your GA4 property via the Google Analytics Data API.</li>
+      <li><strong>Events:</strong> Only the custom event <code>github_click</code>.</li>
+      <li><strong>Parameters:</strong> Only the custom event parameter <code>app_name</code> (e.g., <code>scrna</code>) and the GA4 metric <code>eventCount</code>.</li>
+      <li><strong>Aggregation:</strong> The script requests <em>yesterday’s totals</em> grouped by <code>app_name</code>. It does not request user-level data.</li>
+      <li><strong>Your website tracking:</strong> Your website may send the <code>github_click</code> event to GA4
+        (configured with IP anonymization in the recommended snippet). This policy describes the <em>emailer</em>
+        script’s use of those aggregated events.</li>
+    </ul>
+
+    <h2>How the data is used</h2>
+    <ul>
+      <li>To generate and send a daily email containing yesterday’s total clicks per app.</li>
+      <li>No profiling, advertising, or resale. No sharing with third parties.</li>
+    </ul>
+
+    <h2>Data storage & retention</h2>
+    <ul>
+      <li>The script <strong>does not persist</strong> GA4 data. It reads counts at runtime and sends an email.</li>
+      <li>Emails are delivered to the address you configure. Your mail provider’s normal retention rules apply.</li>
+      <li>Apps Script execution logs may contain minimal metadata (timestamps, success/failure) for debugging.</li>
+    </ul>
+
+    <h2>Data sharing</h2>
+    <ul>
+      <li>No data is sold or shared with third parties.</li>
+      <li>Google acts as a processor for GA4 and Apps Script as part of providing the APIs and infrastructure.</li>
+    </ul>
+
+    <h2>Security</h2>
+    <ul>
+      <li>Access to GA4 is authorized using Google OAuth and restricted to the scope
+          <code>https://www.googleapis.com/auth/analytics.readonly</code>.</li>
+      <li>The script runs in your Google account and uses Google’s infrastructure.</li>
+    </ul>
+
+    <h2>Your choices & data deletion</h2>
+    <p>You can stop all processing at any time:</p>
+    <ol>
+      <li><strong>Remove the trigger:</strong> Apps Script Editor → clock icon (Triggers) → delete the time-driven trigger.</li>
+      <li><strong>Revoke access:</strong> <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a> → remove this app’s access.</li>
+      <li><strong>Delete the project:</strong> In the Apps Script editor, delete the script; in Google Cloud Console, delete the linked project if desired.</li>
+      <li><strong>Optional:</strong> Remove the GA4 tracking snippet or the <code>github_click</code> event from your site if you no longer wish to send these events to GA4.</li>
+    </ol>
+
+    <h2>Children’s data</h2>
+    <p>This tool is not directed to children under 13 and does not knowingly collect personal data.</p>
+
+    <h2>Contact</h2>
+    <p>
+      Data controller / contact: <strong>JCaperella</strong><br/>
+      Email: <a href="mailto:jcaparella@gmail.com">jcaparella@gmail.com</a>
+      <!-- change if you'd prefer a different contact address -->
+    </p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy from time to time. The “Effective date” will indicate the latest revision.</p>
+
+    <h2>Google API Services Disclosure</h2>
+    <p>
+      This app’s use and transfer of information received from Google APIs to any other app complies with the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">
+        Google API Services User Data Policy
+      </a>, including the Limited Use requirements.
+    </p>
+
+  </main>
+</body>
+</html>
